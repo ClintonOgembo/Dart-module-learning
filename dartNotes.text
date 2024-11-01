@@ -1,0 +1,231 @@
+Control flow statements in Dart can be divided into three exciting categories:
+
+Decision-Making Statements 🧠 (Make choices based on conditions)
+
+Looping Statements 🔄 (Repeat code over and over)
+
+Jump Statements 🏃‍♂️ (Hop around different parts of the code)
+
+🧠 Decision-Making Statements – Choose Your Path
+
+Sometimes, you need to choose between different actions depending on certain conditions, like “If Mariam’s age is 18 or more, she can vote!”
+
+🌱 If Statement
+
+This simple decision-maker runs a block of code if a condition is true.
+
+
+void main() {
+  var age = 10;
+
+  if (age > 18) {
+    print("🗳️ Mariam is a voter in Kenya!");
+  }
+
+  print("👧 Mariam is still too young to vote.");
+}
+
+Explanation: If Mariam’s age is above 18, we tell her she can vote. Otherwise, we remind her she’s still young. 
+
+If-else Statements
+
+Sometimes, you have two paths to choose from. If the condition is true, do one thing, otherwise do another.
+
+void main() {
+  var age = 10;
+
+  if (age > 18) {
+    print("🗳️ Mariam is a voter in Kenya!");
+  } else {
+    print("👧 Mariam is still too young to vote.");
+  }
+}
+
+Explanation: If Mariam is old enough to vote, we tell her. If she’s too young, we let her know! 🎤
+
+If else if Statement
+
+When you have more than two choices to check, you can use else if to evaluate multiple conditions.
+
+void main() {
+  var age = 10;
+
+  if (age > 18) {
+    print("🗳️ Mariam can vote in Kenya!");
+  } else if (age == 18) {
+    print("🎉 Mariam is just old enough to vote in Kenya!");
+  } else {
+    print("👧 Mariam is still too young to vote.");
+  }
+}
+
+
+
+Explanation: Here, if Mariam is exactly 18, we give her a special message. If she’s older or younger, we handle it differently. 🧩
+
+
+
+
+
+Switch Case Statement
+
+
+
+In Dart, the switch statement is used to evaluate an expression and execute different blocks of code based on matching cases. 
+
+Think of switch as a more organized if-else—
+
+void main() {
+  int day = 3;
+
+  switch (day) {
+    case 1:
+      print("🌞 Monday: Let's code!");
+      break;
+    case 2:
+      print("🚀 Tuesday: Keep coding!");
+      break;
+    case 3:
+      print("🐪 Wednesday: Halfway through!");
+      break;
+    default:
+      print("🎉 Time for the weekend!");
+  }
+}
+
+Explanation: Depending on the day of the week, you get a fun message to keep you going or celebrate the weekend. 🎊
+
+🔄 Looping Statements – Repeat Until You Get it Right
+
+
+
+Dart Loop is used to run a block of code repetitively for a given number of times or until matches the specified condition. Loops are essential tools for any programming language. 
+
+Loops let you repeat a block of code multiple times! They are like running on a treadmill until you reach your goal. 🏃‍♂️
+
+Dart for loop
+
+The for loop is used when we know how many times a block of code will execute.
+
+When you know exactly how many times you want to repeat something, use a for loop.
+
+void main() {
+  for (int i = 1; i <= 5; i++) {
+    print("🔁 This is loop iteration $i");
+  }
+}
+
+Explanation: We repeat this code five times, and each time, we let you know what iteration you're on! ⏱️
+
+Dart for…in loop
+
+The for..in loop is similar to for loop but different in its syntax. It iterates through an object's properties. The Dart for..in loop accepts an expression as iterator and iterates through the elements one at a time in sequence. 
+
+If you want to loop through items in a list, a for…in loop is handy!
+
+//The for…in loop is slightly different from the for loop
+//It only takes dart object or expression as an iterator and iterates the element one at a time.
+
+void main()  
+{  
+    var list1 = [10,20,30,40,50];  
+    for(var i in list1)           //for..in loop to print list element  
+    {  
+        print(i);       //to print the number  
+    }  
+}  
+Dart while loop
+
+The while loop is used when the number of execution of a block of code is not known. It will execute as long as the condition is true. It initially checks the given condition then executes the statements that are inside the while loop. 
+
+If you need to loop until a condition is false, use a while loop. This is like repeating a task until you're done. 🎯
+
+void main() {
+  var list1 = [10, 20, 30, 40, 50];
+  int i = 0;            // Initialize index
+
+  while (i < list1.length) {  // Loop until i is less than the length of the list
+    print(list1[i]);          // Print the current element at index i
+    i++;                      // Increment the index
+  }
+}
+
+Dart do-while loop
+
+Dart do while loop executes a block of the statement first and then checks the condition. If the condition returns true, then the loop continues its iteration. It is similar to Dart while loop but the only difference is, in the do-while loop a block of statements inside the body of loop will execute at least once.
+
+//do…while loop is similar to the while loop but only 
+//difference is that, it executes the loop statement and then check the given condition. 
+
+void main()  
+{  
+ var a = 1;  
+ var maxnum = 10;  
+do  
+    {                
+       print("The value is: ${a}");  
+       a = a+1;                                    
+       }while(a<maxnum);  
+} 
+Jump Statements
+
+In Dart, jump statements control the flow of execution by breaking or skipping sections of code within loops, conditional statements, or functions. Here’s a rundown of the most commonly used jump statements in Dart:
+
+1. break
+
+The break statement immediately stops the closest enclosing loop (for, while, or do-while) or switch statement and moves to the next part of the program outside that loop or switch.
+
+void main() {
+  for (int i = 0; i < 5; i++) {
+    if (i == 3) {
+      break;  // Stops the loop when i equals 3
+    }
+    print(i);
+  }
+  // Output: 0, 1, 2
+}
+
+
+
+2. continue
+
+The continue statement skips the current iteration of the loop and proceeds to the next iteration. It is often used within for, while, or do-while loops to bypass specific conditions without stopping the entire loop.
+
+
+
+void main() {
+  for (int i = 0; i < 5; i++) {
+    if (i == 2) {
+      continue;  // Skips the rest of the loop for i = 2
+    }
+    print(i);
+  }
+  // Output: 0, 1, 3, 4
+}
+
+
+
+
+3. return
+
+The return statement exits from a function, optionally returning a value to the caller. When return is executed, no further code in the function is executed.
+
+int sum(int a, int b) {
+  return a + b;  // Returns the sum of a and b
+}
+
+void main() {
+  print(sum(3, 4));  // Output: 7
+}
+
+
+
+4. assert (Not a jump statement but useful for control flow)
+
+The assert statement is used in development to enforce certain conditions. If the condition is false, it stops the execution of the code and throws an AssertionError. Although not strictly a jump statement, it helps enforce control flow logic during development.
+
+void main() {
+  int age = 18;
+  assert(age >= 18, "Age must be at least 18");  // No output if true
+  print("You are $age years old.");
+}
